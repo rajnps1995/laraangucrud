@@ -1,0 +1,13 @@
+<p>home works!</p>
+
+<ul>
+    <li *ngFor="let to of todo | asc">{{to}}</li>
+</ul>
+<ul>
+    <li *ngFor="let too of todo1 | desc">{{too}} </li>
+</ul>
+
+<ul>
+    <input type="text" [(ngModel)]="search" />
+    <li *ngFor="let tooo of todo2 | search:search">{{tooo}} </li>
+</ul>

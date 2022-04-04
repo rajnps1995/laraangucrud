@@ -1,0 +1,18 @@
+<h2> Employees View</h2>
+<div *ngIf="proData">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let pro of proData">
+            <div class="card" style="width: 18rem;">
+                <img [src]="pro.image" class="card-img-top" alt="..." width="200" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">{{pro.name}}</h5>
+                    <p class="card-text">
+                        Email : {{pro.email}}
+                    </p>
+                    <button class="btn btn-danger m-2" (click)="delPro(pro.id)"> Delete</button>
+                    <a [routerLink]="['/editemployee',pro.id]" class="btn btn-primary">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
